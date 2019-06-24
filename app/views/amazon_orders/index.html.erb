@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Amazon Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amz</th>
+      <th>Purchase date</th>
+      <th>Payments date</th>
+      <th>Buyer email</th>
+      <th>Buyer name</th>
+      <th>Buyer phone number</th>
+      <th>Company</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @amazon_orders.each do |amazon_order| %>
+      <tr>
+        <td><%= amazon_order.amz_id %></td>
+        <td><%= amazon_order.purchase_date %></td>
+        <td><%= amazon_order.payments_date %></td>
+        <td><%= amazon_order.buyer_email %></td>
+        <td><%= amazon_order.buyer_name %></td>
+        <td><%= amazon_order.buyer_phone_number %></td>
+        <td><%= amazon_order.company %></td>
+        <td><%= link_to 'Show', amazon_order %></td>
+        <td><%= link_to 'Edit', edit_amazon_order_path(amazon_order) %></td>
+        <td><%= link_to 'Destroy', amazon_order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Amazon Order', new_amazon_order_path %>

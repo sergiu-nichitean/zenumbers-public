@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amz:</strong>
+  <%= @amazon_order_item.amz_id %>
+</p>
+
+<p>
+  <strong>Sku:</strong>
+  <%= @amazon_order_item.sku %>
+</p>
+
+<p>
+  <strong>Product name:</strong>
+  <%= @amazon_order_item.product_name %>
+</p>
+
+<p>
+  <strong>Quantity purchased:</strong>
+  <%= @amazon_order_item.quantity_purchased %>
+</p>
+
+<p>
+  <strong>Currency:</strong>
+  <%= @amazon_order_item.currency %>
+</p>
+
+<p>
+  <strong>Item price:</strong>
+  <%= @amazon_order_item.item_price %>
+</p>
+
+<p>
+  <strong>Item tax:</strong>
+  <%= @amazon_order_item.item_tax %>
+</p>
+
+<p>
+  <strong>Shipping price:</strong>
+  <%= @amazon_order_item.shipping_price %>
+</p>
+
+<p>
+  <strong>Shipping tax:</strong>
+  <%= @amazon_order_item.shipping_tax %>
+</p>
+
+<p>
+  <strong>Amazon orders:</strong>
+  <%= @amazon_order_item.amazon_orders %>
+</p>
+
+<%= link_to 'Edit', edit_amazon_order_item_path(@amazon_order_item) %> |
+<%= link_to 'Back', amazon_order_items_path %>

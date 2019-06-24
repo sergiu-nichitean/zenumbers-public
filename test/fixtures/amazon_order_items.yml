@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amz_id: MyString
+  sku: MyString
+  product_name: MyString
+  quantity_purchased: MyString
+  currency: MyString
+  item_price: 1.5
+  item_tax: 1.5
+  shipping_price: 1.5
+  shipping_tax: 1.5
+  amazon_orders: one
+
+two:
+  amz_id: MyString
+  sku: MyString
+  product_name: MyString
+  quantity_purchased: MyString
+  currency: MyString
+  item_price: 1.5
+  item_tax: 1.5
+  shipping_price: 1.5
+  shipping_tax: 1.5
+  amazon_orders: two

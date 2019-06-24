@@ -1,0 +1,2 @@
+class ChargebackEvent < ShipmentEvent
+end

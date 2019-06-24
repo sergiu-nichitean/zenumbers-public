@@ -1,0 +1,67 @@
+<%= form_with(model: amazon_order_item, local: true) do |form| %>
+  <% if amazon_order_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(amazon_order_item.errors.count, "error") %> prohibited this amazon_order_item from being saved:</h2>
+
+      <ul>
+      <% amazon_order_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :amz_id %>
+    <%= form.text_field :amz_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sku %>
+    <%= form.text_field :sku %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_name %>
+    <%= form.text_field :product_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity_purchased %>
+    <%= form.text_field :quantity_purchased %>
+  </div>
+
+  <div class="field">
+    <%= form.label :currency %>
+    <%= form.text_field :currency %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item_price %>
+    <%= form.text_field :item_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item_tax %>
+    <%= form.text_field :item_tax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shipping_price %>
+    <%= form.text_field :shipping_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shipping_tax %>
+    <%= form.text_field :shipping_tax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amazon_orders_id %>
+    <%= form.text_field :amazon_orders_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

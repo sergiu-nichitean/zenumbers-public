@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Monthly Cashflow for <%= @month_name %></h1>
+
+<h2>Revenues</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Revenue name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @revenues.each do |revenue| %>
+      <tr>
+        <td><%= revenue[:name] %></td>
+        <td><%= @global_currency %> <%= revenue[:amount] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>Expenses</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Expense name</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expenses.each do |expense| %>
+      <tr>
+        <td><%= expense[:name] %></td>
+        <td><%= @global_currency %> <%= expense[:amount] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>Bottom Line</h2>
+
+<p>Total profit: <%= @total_profit %></p>
+<p>Net profit margin: <%= @net_profit_margin %></p>
+<p>Total ACoS: <%= @total_acos %></p>
+<p>Brutto profit margin: <%= @brutto_profit_margin %></p>

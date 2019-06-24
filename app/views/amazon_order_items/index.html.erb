@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Amazon Order Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amz</th>
+      <th>Sku</th>
+      <th>Product name</th>
+      <th>Quantity purchased</th>
+      <th>Currency</th>
+      <th>Item price</th>
+      <th>Item tax</th>
+      <th>Shipping price</th>
+      <th>Shipping tax</th>
+      <th>Amazon orders</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @amazon_order_items.each do |amazon_order_item| %>
+      <tr>
+        <td><%= amazon_order_item.amz_id %></td>
+        <td><%= amazon_order_item.sku %></td>
+        <td><%= amazon_order_item.product_name %></td>
+        <td><%= amazon_order_item.quantity_purchased %></td>
+        <td><%= amazon_order_item.currency %></td>
+        <td><%= amazon_order_item.item_price %></td>
+        <td><%= amazon_order_item.item_tax %></td>
+        <td><%= amazon_order_item.shipping_price %></td>
+        <td><%= amazon_order_item.shipping_tax %></td>
+        <td><%= amazon_order_item.amazon_orders %></td>
+        <td><%= link_to 'Show', amazon_order_item %></td>
+        <td><%= link_to 'Edit', edit_amazon_order_item_path(amazon_order_item) %></td>
+        <td><%= link_to 'Destroy', amazon_order_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Amazon Order Item', new_amazon_order_item_path %>

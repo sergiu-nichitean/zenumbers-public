@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1.5
+  expense_type: MyString
+  start_date: 2018-07-13 10:54:02
+  end_date: 2018-07-13 10:54:02
+  company: one
+  amazon_listing: one
+
+two:
+  amount: 1.5
+  expense_type: MyString
+  start_date: 2018-07-13 10:54:02
+  end_date: 2018-07-13 10:54:02
+  company: two
+  amazon_listing: two

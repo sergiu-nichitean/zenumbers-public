@@ -1,0 +1,2 @@
+class RefundEvent < ShipmentEvent
+end
